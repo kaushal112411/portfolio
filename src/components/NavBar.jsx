@@ -1,5 +1,6 @@
 import React ,{useState}from 'react';
 import {FaBars,FaTimes} from "react-icons/fa";
+import {Link} from "react-scroll";
 const NavBar = () => {
     const [nav, setNav] = useState(false)
     const links = [
@@ -28,13 +29,14 @@ const NavBar = () => {
     return (
         <div className='flex justify-between items-center bg-black  text-white px-4 w-full h-20 fixed'>
             <div>
-            <h1 className='text-5xl font-signature ml02'>kaushal</h1>
+            <h1 className='text-5xl font-signature ml02'>kaushal sriperambudur </h1>
             </div>
 
             <ul className='hidden md:flex'>
                 {
                     links.map((item)=>{
-                        return <li key={item.id} className='px-6 cursor-pointer text-gray-500 capitalize font-medium'>{item.link}</li>
+                        console.log(item.link)
+                        return <li key={item.id} className='px-6 cursor-pointer text-gray-500 capitalize font-medium'><Link to={item.link} smooth duration={500}>{item.link}</Link></li>
                     })
                 }
             </ul>
@@ -44,7 +46,7 @@ const NavBar = () => {
             {nav && <ul className=' flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800'>
             {
                     links.map((item)=>{
-                        return <li key={item.id} className='px-4 py-6 text-4xl cursor-pointer text-gray-500 capitalize'>{item.link}</li>
+                        return <li key={item.id} className='px-4 py-6 text-4xl cursor-pointer text-gray-500 capitalize'><Link onClick={()=>{setNav(!nav)}} to={item.link} smooth duration={500}>{item.link}</Link></li>
                     })
                 }
             </ul>}
