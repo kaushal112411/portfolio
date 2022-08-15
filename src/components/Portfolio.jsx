@@ -6,11 +6,13 @@ const Portfolio = () => {
    const portfolios = [
     {
         id:1,
-        val:memories
+        val:memories,
+        href:"https://incomparable-arithmetic-afffcb.netlify.app/"
     },
     {
         id:2,
-        val:movies
+        val:movies,
+        href:"https://movie-search-61eueim34-kaushal112411.vercel.app/"
     }
    ]
 
@@ -25,12 +27,12 @@ const Portfolio = () => {
 
            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'> 
               {
-                portfolios.map(({id,val})=>{ 
+                portfolios.map(({id,val,href})=>{ 
                     return (
                     <div key={id} className='shadow-md shadow-gray-400 rounded-lg'>
                 <img src={val} alt="" className='rounded-md duration-200 hover:scale-105' />
                 <div className='flex justify-center items-center'>
-                    <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Demo</button>
+                    <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'><a href={href}>Demo</a></button>
                     <button className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</button>
                 </div>
             </div>
