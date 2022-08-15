@@ -2,7 +2,6 @@ import React from "react";
 import hero from "../assets/IMG-8867(2).jpg";
 import { HiChevronDoubleRight } from "react-icons/hi";
 import {Link} from "react-scroll"
-import Portfolio from "./Portfolio";
 const Home = () => {
   return (
     <div
@@ -34,7 +33,7 @@ const Home = () => {
         </div>
 
         <div className="">
-          <img src={hero} className=" rounded-2xl mx-auto w-2/3 md:w-full" />
+          <img src={hero} alt="" className=" rounded-2xl mx-auto w-2/3 md:w-full" />
         </div>
       </div>
     </div>
