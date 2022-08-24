@@ -11,7 +11,7 @@ const Home = () => {
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className=" justify-center h-full flex flex-col">
           <h1 className=" font-bold text-4xl sm:text-7xl">
-            I am a frontend developer(Reactjs)
+            I am a software developer(Reactjs,nodejs)
           </h1>
           <p className=" text-gray-500 py-4 max-w-md">
             I am a software developer looking for a position with a focus on
